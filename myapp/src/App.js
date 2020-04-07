@@ -17,12 +17,15 @@ class App extends Component {
       ninjas: ninjas
     })
   } 
+  deleteNinja = (id) => {
+    console.log(id)
+  }
   render() {
     return (
       <div className="App">
         <h1>Chang's first React app!</h1>
         <p>Welcome User</p>
-        <Ninjas ninjas= { this.state.ninjas } />
+        <Ninjas deleteNinja= { this.deleteNinja } ninjas= { this.state.ninjas } />
         <AddNinja addNinja= {this.addNinja } />
       </div>
     );
